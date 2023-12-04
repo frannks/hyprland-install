@@ -9,8 +9,10 @@ FOLDER_CREATE(){
   mkdir $HOME/.frannks-mydots
   mkdir $HOME/.compile
   mkdir $HOME/.config/rofi
+  mkdir $HOME/.config/dunst
   mkdir $HOME/.config/rofi/themes
   mkdir $HOME/.config/nvim
+  mkdir $HOME/.config/kitty
   mkdir $HOME/.config/spotifyd
   mkdir $HOME/.fonts
   mkdir $HOME/.themes
@@ -55,4 +57,41 @@ AUR_BUILD(){
   cd $HOME/.projects
   git clone https://github.com/GideonWolfe/Zathura-Pywal.git
   cd Zathura-Pywal && chmod +x install.sh && ./install.sh
+
+  clear
+  cd $HOME/.frannks-mydots
+  git clone https://github.com/frannks/mydots-hyprland.git
+}
+
+# Copiando arquivos
+FILES_COPY(){
+  clear && echo -e "[!] Copiando arquivos..." && sleep 2
+  cp $HOME/.frannks-mydots/mydots-hyprland/bin/* $HOME/.local/bin && cd $HOME/.local/bin && chmod +x *
+  cp $HOME/.frannks-mydots/mydots-hyprland/scripts/* $HOME/Scripts && cd $HOME/Scripts && chmod +x *
+  cp $HOME/.frannks-mydots/mydots-hyprland/.fonts/* $HOME/.fonts
+  cp $HOME/.frannks-mydots/mydots-hyprland/home/.zshrc $HOME
+  cp $HOME/.frannks-mydots/mydots-hyprland/home/.zshenv $HOME
+  cp $HOME/.frannks-mydots/mydots-hyprland/home/.zprofile $HOME
+  cp $HOME/.frannks-mydots/mydots-hyprland/home/.aliases $HOME
+  cp $HOME/.frannks-mydots/mydots-hyprland/home/.scripts $HOME
+  cp $HOME/.frannks-mydots/mydots-hyprland/home/.emojis $HOME
+  touch .zhistory $HOME
+  sudo cp $HOME/.frannks-mydots/mydots-hyprland/.fonts/Iosevka-Medium.ttf /usr/share/fonts/TTF
+  sudo cp $HOME/.frannks-mydots/mydots-hyprland/.fonts/Iosevka-Bold.ttf /usr/share/fonts/TTF
+  sudo cp $HOME/.frannks-mydots/mydots-hyprland/.fonts/Poppins.otf /usr/share/fonts
+  sudo cp $HOME/.frannks-mydots/mydots-hyprland/.fonts/MesloLGS NF Regular.ttf /usr/share/fonts/TTF
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/kitty/kitty.conf $HOME/.config/kitty
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/kitty/theme.conf $HOME/.config/kitty
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/dunstrc $HOME/.config/dunst
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
+  xdg-mime default org.pwmt.zathura.desktop application/pdf
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/nvim/init.vim $HOME/.config/nvim
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  cp -r $HOME/.local/share/nvim/site/autoload $HOME/.config/nvim
+  clear && cd $HOME/Wallpapers
+   wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/033.png"
+   wal -i $HOME/Wallpapers/033.png
+   sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm
+   clear && read -p "INSTALANÇÃO FINALIZADA PRESSIONE ENTER PARA CONCLUIR"
 }
