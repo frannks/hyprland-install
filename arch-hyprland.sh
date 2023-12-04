@@ -37,7 +37,7 @@ FOLDER_CREATE(){
 
 # Instalação de pacotes
 PACKAGES_INSTALL(){
-  clear && sudo pacman -S rustup gucharmap kitty grim slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib lxappearance gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc base-devel lsd yt-dlp bat net-tools dosfstools polkit-gnome nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pypperclip --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S rustup gucharmap kitty grim slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib lxappearance gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc base-devel lsd yt-dlp bat net-tools dosfstools polkit-gnome nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
@@ -46,6 +46,11 @@ AUR_BUILD(){
   cd $HOME/.compile
   git clone https://aur.archlinux.org/wal-telegram-git.git
   cd wal-telegram-git
+  makepkg -sic --noconfirm
+
+  cd $HOME/.compile
+  git clone https://aur.archlinux.org/swaylock-effects.git
+  cd swaylock-effects
   makepkg -sic --noconfirm
 
   clear
@@ -93,7 +98,7 @@ FILES_COPY(){
    wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/033.png"
    wal -i $HOME/Wallpapers/033.png
    sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm
-   clear && read -p "INSTALAÇÃO FINALIZADA PRESSIONE ENTER PARA CONCLUIR!!!"
+   clear && read -p "INSTALAÇÃO FINALIZADA PRESSIONE ENTER PARA CONCLUIR!!!" && clear && exit 0
 }
 FOLDER_CREATE
 PACKAGES_INSTALL
