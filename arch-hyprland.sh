@@ -93,5 +93,9 @@ FILES_COPY(){
    wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/033.png"
    wal -i $HOME/Wallpapers/033.png
    sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm
-   clear && read -p "INSTALANÇÃO FINALIZADA PRESSIONE ENTER PARA CONCLUIR"
+   clear && read -p "INSTALAÇÃO FINALIZADA PRESSIONE ENTER PARA CONCLUIR!!!"
 }
+FOLDER_CREATE
+PACKAGES_INSTALL
+AUR_BUILD
+FILES_COPY
