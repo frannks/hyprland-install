@@ -89,6 +89,8 @@ FILES_COPY(){
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/kitty/theme.conf $HOME/.config/kitty
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/dunstrc $HOME/.config/dunst
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/rofi/config.rasi $HOME/.config/rofi
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/rofi/search_browser.sh $HOME/.config/rofi && chmod +x search_browser.sh
   xdg-mime default org.pwmt.zathura.desktop application/pdf
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/nvim/init.vim $HOME/.config/nvim
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
