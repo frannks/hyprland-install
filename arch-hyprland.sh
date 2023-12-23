@@ -9,6 +9,9 @@ FOLDER_CREATE(){
   mkdir $HOME/.frannks-mydots
   mkdir $HOME/.compile
   mkdir $HOME/.config/rofi
+  mkdir $HOME/.config/hypr
+  mkdir $HOME/.config/waybar
+  mkdir $HOME/.config/swaylock
   mkdir $HOME/.config/dunst
   mkdir $HOME/.config/rofi/themes
   mkdir $HOME/.config/nvim
@@ -21,14 +24,16 @@ FOLDER_CREATE(){
   mkdir $HOME/Wallpapers
   mkdir $HOME/.projects
   mkdir $HOME/Franks
+  mkdir $HOME/Scripts
   mkdir -p $HOME/.config/mpv/scripts
   mkdir -p $HOME/Franks/Estudos
-  mkdir -p $HOME/Franks/Games
+  mkdir -p $HOME/Franks/Games/PPSSPP
   mkdir -p $HOME/Franks/Filmes
   mkdir -p $HOME/Franks/Livros
   mkdir -p $HOME/Franks/Livros/MyBooks
   mkdir -p $HOME/Franks/Python
   mkdir -p $HOME/Franks/C
+  mkdir -p $HOME/Franks/Android
   mkdir -p $HOME/Franks/ShellScripts
   mkdir -p $HOME/Franks/Projetos/TelegramBots
   mkdir -p $HOME/Franks/Projetos/Dockerfiles
@@ -87,6 +92,10 @@ FILES_COPY(){
   sudo cp $HOME/.frannks-mydots/mydots-hyprland/.fonts/MesloLGS NF Regular.ttf /usr/share/fonts/TTF
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/kitty/kitty.conf $HOME/.config/kitty
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/kitty/theme.conf $HOME/.config/kitty
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/hyprland.conf $HOME/.config/hypr
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/hyprpaper.conf $HOME/.config/hypr
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar $HOME/.config/waybar
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/swaylock $HOME/.config/swaylock
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/dunstrc $HOME/.config/dunst
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/rofi/config.rasi $HOME/.config/rofi
@@ -98,8 +107,8 @@ FILES_COPY(){
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   cp -r $HOME/.local/share/nvim/site/autoload $HOME/.config/nvim
   clear && cd $HOME/Wallpapers
-   wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/033.png"
-   wal -i $HOME/Wallpapers/033.png
+   wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/030.png"
+   wal -i $HOME/Wallpapers/030.png
    sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm
    clear && read -p "INSTALAÇÃO FINALIZADA PRESSIONE ENTER PARA CONCLUIR!!!" && clear && exit 0
 }
