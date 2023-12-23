@@ -94,8 +94,9 @@ FILES_COPY(){
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/kitty/theme.conf $HOME/.config/kitty
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/hyprland.conf $HOME/.config/hypr
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/hyprpaper.conf $HOME/.config/hypr
-  cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar $HOME/.config/waybar
-  cp $HOME/.frannks-mydots/mydots-hyprland/.config/swaylock $HOME/.config/swaylock
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/config $HOME/.config/waybar
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/style.css $HOME/.config/waybar
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/swaylock/config $HOME/.config/swaylock
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/dunstrc $HOME/.config/dunst
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/rofi/config.rasi $HOME/.config/rofi
