@@ -108,8 +108,8 @@ FILES_COPY(){
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   cp -r $HOME/.local/share/nvim/site/autoload $HOME/.config/nvim
   clear && cd $HOME/Wallpapers
-   wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/030.png"
-   wal -i $HOME/Wallpapers/030.png
+   wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/036.jpg"
+   wal -i $HOME/Wallpapers/036.jpg
    sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm
    clear && read -p "INSTALAÇÃO FINALIZADA PRESSIONE ENTER PARA CONCLUIR!!!" && clear && exit 0
 }
