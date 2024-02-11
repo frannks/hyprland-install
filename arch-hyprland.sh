@@ -26,6 +26,7 @@ FOLDER_CREATE(){
   mkdir $HOME/Franks
   mkdir $HOME/Scripts
   mkdir -p $HOME/.config/mpv/scripts
+  mkdir -p $HOME/.config/waybar/scripts
   mkdir -p $HOME/Franks/Estudos
   mkdir -p $HOME/Franks/Games/PPSSPP
   mkdir -p $HOME/Franks/Filmes
@@ -95,6 +96,7 @@ FILES_COPY(){
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/hyprland.conf $HOME/.config/hypr
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/hyprpaper.conf $HOME/.config/hypr
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/config $HOME/.config/waybar
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/scripts/check_updates.sh $HOME/.config/waybar/scripts && chmod +x $HOME/.config/waybar/scripts/check_updates.sh
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/style.css $HOME/.config/waybar
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/swaylock/config $HOME/.config/swaylock
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/dunstrc $HOME/.config/dunst
