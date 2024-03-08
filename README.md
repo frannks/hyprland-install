@@ -1,3 +1,3 @@
 # hyprland-install
 
-<img src="HyprlandWM-NASA.png">
+<img src="Hyprland.png">
