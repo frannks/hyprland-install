@@ -13,6 +13,7 @@ FOLDER_CREATE(){
   mkdir $HOME/.config/waybar
   mkdir $HOME/.config/swaylock
   mkdir $HOME/.config/dunst
+  #mkdir $HOME/.config/wofi
   #mkdir $HOME/.config/rofi/themes
   mkdir $HOME/.config/nvim
   mkdir $HOME/.config/kitty
@@ -101,6 +102,7 @@ FILES_COPY(){
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/style.css $HOME/.config/waybar
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/wlogout/style.css $HOME/.config/wlogout
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/swaylock/config $HOME/.config/swaylock
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/wofi $HOME/.config/
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/dunstrc $HOME/.config/dunst
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
   #cp $HOME/.frannks-mydots/mydots-hyprland/.config/rofi/config.rasi $HOME/.config/rofi
