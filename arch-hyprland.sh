@@ -8,13 +8,11 @@ FOLDER_CREATE(){
   clear
   mkdir $HOME/.frannks-mydots
   mkdir $HOME/.compile
-  #mkdir $HOME/.config/rofi
   mkdir $HOME/.config/hypr
   mkdir $HOME/.config/waybar
   mkdir $HOME/.config/swaylock
   mkdir $HOME/.config/dunst
-  #mkdir $HOME/.config/wofi
-  #mkdir $HOME/.config/rofi/themes
+  mkdir $HOME/.config/wofi
   mkdir $HOME/.config/nvim
   mkdir $HOME/.config/kitty
   mkdir $HOME/.config/spotifyd
@@ -26,26 +24,20 @@ FOLDER_CREATE(){
   mkdir $HOME/.projects
   mkdir $HOME/Franks
   mkdir $HOME/Scripts
-  mkdir -p $HOME/.config/mpv/scripts
   mkdir -p $HOME/.config/waybar/scripts
   mkdir -p $HOME/.config/wlogout
   mkdir -p $HOME/Franks/Estudos
   mkdir -p $HOME/Franks/Games/PPSSPP
-  mkdir -p $HOME/Franks/Filmes
-  mkdir -p $HOME/Franks/Livros
-  mkdir -p $HOME/Franks/Livros/MyBooks
   mkdir -p $HOME/Franks/Python
   mkdir -p $HOME/Franks/C
   mkdir -p $HOME/Franks/Android
-  mkdir -p $HOME/Franks/ShellScripts
-  mkdir -p $HOME/Franks/Projetos/TelegramBots
-  mkdir -p $HOME/Franks/Projetos/Dockerfiles
   mkdir -p $HOME/Franks/Projetos/Repository
 }
 
 # Instalação de pacotes
 PACKAGES_INSTALL(){
-  clear && sudo pacman -S rustup gucharmap kitty grim slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib lxappearance gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc base-devel lsd yt-dlp bat net-tools dosfstools polkit-gnome nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S archlinux-keyring --noconfirm
+  clear && sudo pacman -S rustup gucharmap slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc base-devel lsd yt-dlp bat net-tools dosfstools polkit-gnome nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
@@ -105,8 +97,6 @@ FILES_COPY(){
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/wofi $HOME/.config/
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/dunstrc $HOME/.config/dunst
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
-  #cp $HOME/.frannks-mydots/mydots-hyprland/.config/rofi/config.rasi $HOME/.config/rofi
-  #cp $HOME/.frannks-mydots/mydots-hyprland/.config/rofi/search_browser.sh $HOME/.config/rofi && chmod +x search_browser.sh
   cp $HOME/.frannks-mydots/mydots-hyprland/home/.xcompose $HOME
   xdg-mime default org.pwmt.zathura.desktop application/pdf
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/nvim/init.vim $HOME/.config/nvim
