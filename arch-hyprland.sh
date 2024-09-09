@@ -37,7 +37,7 @@ FOLDER_CREATE(){
 # Instalação de pacotes
 PACKAGES_INSTALL(){
   clear && sudo pacman -S archlinux-keyring --noconfirm
-  clear && sudo pacman -S rustup gucharmap slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc base-devel lsd yt-dlp bat net-tools dosfstools polkit-gnome nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S rustup firefox-i18n-pt-br git dosfstools npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg mangohud lib32-mangohud gamescope wofi bitwarden wine-staging qemu pavucontrol pipewire pipewire-alsa pipewire-pulse slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc lsd yt-dlp bat net-tools dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
