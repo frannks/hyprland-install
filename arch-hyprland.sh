@@ -9,6 +9,7 @@ FOLDER_CREATE(){
   mkdir $HOME/.frannks-mydots
   mkdir $HOME/.compile
   mkdir $HOME/.config/hypr
+  mkdir $HOME/.config/hypr/scripts
   mkdir $HOME/.config/waybar
   mkdir $HOME/.config/swaylock
   mkdir $HOME/.config/dunst
@@ -88,13 +89,14 @@ FILES_COPY(){
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/kitty/kitty.conf $HOME/.config/kitty
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/kitty/theme.conf $HOME/.config/kitty
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/hyprland.conf $HOME/.config/hypr
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/scripts/toggle_mic.sh $HOME/.config/hypr/scripts && chmod +x $HOME/.config/hypr/scripts/toggle_mic.sh
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/hyprpaper.conf $HOME/.config/hypr
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/config $HOME/.config/waybar
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/scripts/check_updates.sh $HOME/.config/waybar/scripts && chmod +x $HOME/.config/waybar/scripts/check_updates.sh
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/style.css $HOME/.config/waybar
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/wlogout/style.css $HOME/.config/wlogout
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/swaylock/config $HOME/.config/swaylock
-  cp $HOME/.frannks-mydots/mydots-hyprland/.config/wofi $HOME/.config/
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/wofi $HOME/.config/wofi
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/dunstrc $HOME/.config/dunst
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
   cp $HOME/.frannks-mydots/mydots-hyprland/home/.xcompose $HOME
@@ -104,8 +106,8 @@ FILES_COPY(){
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   cp -r $HOME/.local/share/nvim/site/autoload $HOME/.config/nvim
   clear && cd $HOME/Wallpapers
-   wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/012.jpg"
-   wal -i $HOME/Wallpapers/012.jpg
+   wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/013.png"
+   wal -i $HOME/Wallpapers/013.png
    sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm
    clear && read -p "INSTALAÇÃO FINALIZADA PRESSIONE ENTER PARA CONCLUIR!!!" && clear && exit 0
 }
