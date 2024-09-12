@@ -1,3 +1,3 @@
 # hyprland-install
 
-<img src="hyprland-arch.png">
+<img src="ArchLinuxHyprland.png">
