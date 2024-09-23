@@ -38,7 +38,7 @@ FOLDER_CREATE(){
 # Instalação de pacotes
 PACKAGES_INSTALL(){
   clear && sudo pacman -S archlinux-keyring --noconfirm
-  clear && sudo pacman -S rustup firefox-i18n-pt-br git dosfstools npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg mangohud gamescope wofi bitwarden qemu pavucontrol pipewire pipewire-alsa pipewire-pulse slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc lsd yt-dlp bat net-tools dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S rustup firefox-i18n-pt-br git dosfstools npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg mangohud gamescope wofi bitwarden qemu pavucontrol pipewire pipewire-alsa pipewire-pulse slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-gobject python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
@@ -89,10 +89,10 @@ FILES_COPY(){
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/kitty/kitty.conf $HOME/.config/kitty
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/kitty/theme.conf $HOME/.config/kitty
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/hyprland.conf $HOME/.config/hypr
-  cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/scripts/toggle_mic.sh $HOME/.config/hypr/scripts && chmod +x $HOME/.config/hypr/scripts/toggle_mic.sh
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/scripts/* $HOME/.config/hypr/scripts && chmod +x $HOME/.config/waybar/scripts/*
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/hypr/hyprpaper.conf $HOME/.config/hypr
-  cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/config $HOME/.config/waybar
-  cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/scripts/check_updates.sh $HOME/.config/waybar/scripts && chmod +x $HOME/.config/waybar/scripts/check_updates.sh
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/config.jsonc $HOME/.config/waybar
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/scripts/* $HOME/.config/waybar/scripts && chmod +x $HOME/.config/waybar/scripts/*
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/style.css $HOME/.config/waybar
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/wlogout/style.css $HOME/.config/wlogout
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/swaylock/config $HOME/.config/swaylock
