@@ -33,7 +33,7 @@ FOLDER_CREATE(){
 # ===========================================| Instalando pacotes
 PACKAGES_INSTALL(){
   clear && sudo pacman -S archlinux-keyring --noconfirm
-  clear && sudo pacman -S rustup firefox-i18n-pt-br git dosfstools npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg wofi bitwarden qemu pavucontrol pipewire pipewire-alsa pipewire-pulse slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib ytfzf lib32-mangohud mangohud wine-staging zathura zathura-pdf-poppler gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-gobject python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S rustup firefox-i18n-pt-br git dosfstools irssi npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg wofi bitwarden qemu pavucontrol pipewire pipewire-alsa pipewire-pulse slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib ytfzf lib32-mangohud mangohud wine-staging zathura zathura-pdf-poppler gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-gobject python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
