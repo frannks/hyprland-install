@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-# Franklin Souza
-# @FranklinTech
+                                        # Franklin Souza
+                                          # @frannksz
 
-# Criando pastas
+
+# ===========================================| Criando pastas
 FOLDER_CREATE(){
   clear
   mkdir $HOME/.frannks-mydots
@@ -16,7 +17,6 @@ FOLDER_CREATE(){
   mkdir $HOME/.config/wofi
   mkdir $HOME/.config/nvim
   mkdir $HOME/.config/kitty
-  mkdir $HOME/.config/spotifyd
   mkdir $HOME/.fonts
   mkdir $HOME/.themes
   mkdir $HOME/.icons
@@ -26,27 +26,27 @@ FOLDER_CREATE(){
   mkdir $HOME/Franks
   mkdir $HOME/Scripts
   mkdir -p $HOME/.config/waybar/scripts
-  mkdir -p $HOME/.config/wlogout
   mkdir -p $HOME/Franks/Estudos
-  mkdir -p $HOME/Franks/Games/PPSSPP
-  mkdir -p $HOME/Franks/Python
-  mkdir -p $HOME/Franks/C
-  mkdir -p $HOME/Franks/Android
   mkdir -p $HOME/Franks/Projetos/Repository
 }
 
-# Instalação de pacotes
+# ===========================================| Instalando pacotes
 PACKAGES_INSTALL(){
   clear && sudo pacman -S archlinux-keyring --noconfirm
-  clear && sudo pacman -S rustup firefox-i18n-pt-br git dosfstools npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg mangohud gamescope wofi bitwarden qemu pavucontrol pipewire pipewire-alsa pipewire-pulse slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-gobject python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S rustup firefox-i18n-pt-br git dosfstools npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg wofi bitwarden qemu pavucontrol pipewire pipewire-alsa pipewire-pulse slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib ytfzf lib32-mangohud mangohud wine-staging zathura zathura-pdf-poppler gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-gobject python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
-# Compilando pacotes AUR
+# ===========================================| Compilando pacotes AUR
 AUR_BUILD(){
   cd $HOME/.compile
   git clone https://aur.archlinux.org/wal-telegram-git.git
   cd wal-telegram-git
+  makepkg -sic --noconfirm
+
+  cd $HOME/.compile
+  git clone https://aur.archlinux.org/grimblast-git.git
+  cd grimblast-git
   makepkg -sic --noconfirm
 
   cd $HOME/.compile
@@ -69,7 +69,7 @@ AUR_BUILD(){
   git clone https://github.com/frannks/mydots-hyprland.git
 }
 
-# Copiando arquivos
+# ===========================================| Copiando arquivos
 FILES_COPY(){
   clear && echo -e "[!] Copiando arquivos..." && sleep 2
   cp $HOME/.frannks-mydots/mydots-hyprland/bin/* $HOME/.local/bin && cd $HOME/.local/bin && chmod +x *
@@ -96,18 +96,19 @@ FILES_COPY(){
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/style.css $HOME/.config/waybar
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/wlogout/style.css $HOME/.config/wlogout
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/swaylock/config $HOME/.config/swaylock
-  cp $HOME/.frannks-mydots/mydots-hyprland/.config/wofi $HOME/.config/wofi
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/wofi/* $HOME/.config/wofi
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/dunstrc $HOME/.config/dunst
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
   cp $HOME/.frannks-mydots/mydots-hyprland/home/.xcompose $HOME
   xdg-mime default org.pwmt.zathura.desktop application/pdf
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/nvim/init.vim $HOME/.config/nvim
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/nvim/lua-plugins $HOME/.config/nvim
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   cp -r $HOME/.local/share/nvim/site/autoload $HOME/.config/nvim
   clear && cd $HOME/Wallpapers
-   wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/013.png"
-   wal -i $HOME/Wallpapers/013.png
+   wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/018.png"
+   wal -i $HOME/Wallpapers/018.png
    sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm
    clear && read -p "INSTALAÇÃO FINALIZADA PRESSIONE ENTER PARA CONCLUIR!!!" && clear && exit 0
 }
