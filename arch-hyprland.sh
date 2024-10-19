@@ -12,6 +12,7 @@ FOLDER_CREATE(){
   mkdir $HOME/.config/hypr
   mkdir $HOME/.config/hypr/scripts
   mkdir $HOME/.config/waybar
+  mkdir $HOME/.config/qutebrowser
   mkdir $HOME/.config/swaylock
   mkdir $HOME/.config/dunst
   mkdir $HOME/.config/wofi
@@ -33,7 +34,7 @@ FOLDER_CREATE(){
 # ===========================================| Instalando pacotes
 PACKAGES_INSTALL(){
   clear && sudo pacman -S archlinux-keyring --noconfirm
-  clear && sudo pacman -S rustup firefox-i18n-pt-br git dosfstools irssi npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg wofi bitwarden qemu pavucontrol pipewire pipewire-alsa pipewire-pulse slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib ytfzf lib32-mangohud mangohud wine-staging zathura zathura-pdf-poppler gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-gobject python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S rustup qutebrowser git dosfstools irssi npm thunderbird thunderbird-dark-reader thunderbird-i18n-pt-br gucharmap catimg wofi bitwarden qemu pavucontrol pipewire pipewire-alsa pipewire-pulse slurp cronie htop unzip unrar zip p7zip tor dunst fuse mpv pacman-contrib ytfzf lib32-mangohud mangohud wine-staging zathura zathura-pdf-poppler gvfs-mtp xdg-user-dirs ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome bc lsd yt-dlp bat net-tools wf-recorder dosfstools nodejs yarn fzf ueberzug man-db python-pywal wget pyenv python-pipx python-jedi python-gobject python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
@@ -94,6 +95,7 @@ FILES_COPY(){
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/config.jsonc $HOME/.config/waybar
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/scripts/* $HOME/.config/waybar/scripts && chmod +x $HOME/.config/waybar/scripts/*
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/waybar/style.css $HOME/.config/waybar
+  cp $HOME/.frannks-mydots/mydots-hyprland/.config/qutebrowser/* $HOME/.config/qutebrowser
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/wlogout/style.css $HOME/.config/wlogout
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/swaylock/config $HOME/.config/swaylock
   cp $HOME/.frannks-mydots/mydots-hyprland/.config/wofi/* $HOME/.config/wofi
